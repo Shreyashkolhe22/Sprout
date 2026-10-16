@@ -84,24 +84,29 @@ Before each new release, raise `version:` in `pubspec.yaml` (for example
 ## Landing page and downloads
 
 `landing/` is a plain static site (HTML + CSS, no build step) deployed on
-Vercel with **Root Directory = `landing`**. Its Download buttons point at
+Vercel with **Root Directory = `landing`**. Its Download buttons point at the APK attached to a specific GitHub Release:
 
 ```
-https://github.com/Shreyashkolhe22/Sprout/releases/latest/download/Sprout.apk
+https://github.com/Shreyashkolhe22/Sprout/releases/download/v1.0.0/Sprout-1.0.0.apk
 ```
 
-so the file attached to the newest GitHub Release must be named exactly
-`Sprout.apk`. The link then never changes between versions.
+The link is pinned to that version, so each new release needs the link updated
+(step 5). This also keeps the page's checksum in step with the file it links to.
 
 **Publishing a new version**
 
-1. Raise `version:` in `pubspec.yaml`.
-2. `flutter build apk --release`, then copy the result to `dist/Sprout.apk`
-   (`dist/` is git-ignored; the APK lives in GitHub Releases, not in git).
-3. On GitHub: Releases, Draft a new release, tag `vX.Y.Z`, attach `Sprout.apk`.
-4. Update the version, size and **SHA-256** shown in `landing/index.html`
-   (`Get-FileHash dist\Sprout.apk` on Windows). Every build has a new checksum.
-5. Push. Vercel redeploys the page automatically.
+1. Raise `version:` in `pubspec.yaml` (for example `1.0.1+2`).
+2. `flutter build apk --release`, then copy the result to
+   `dist/Sprout-1.0.1.apk` (`dist/` is git-ignored; APKs live in GitHub
+   Releases, not in git).
+3. On GitHub: Releases, Draft a new release, tag `v1.0.1`, attach the file.
+4. Check the checksum GitHub shows for the asset (or run
+   `Get-FileHash dist\Sprout-1.0.1.apk` on Windows).
+5. In `landing/index.html` and `landing/privacy.html` update the download link
+   (`v1.0.0/Sprout-1.0.0.apk` becomes `v1.0.1/Sprout-1.0.1.apk`), plus the
+   version, size and **SHA-256** on the page and in the `softwareVersion`
+   field. Every build has a new checksum.
+6. Push. Vercel redeploys the page automatically.
 
 After the first Vercel deploy, set the `og:image` meta tag in
 `landing/index.html` to the full URL (for example
