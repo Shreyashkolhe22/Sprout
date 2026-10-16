@@ -81,6 +81,35 @@ apksigner verify --print-certs app-release.apk   # expect: CN=Sprout
 Before each new release, raise `version:` in `pubspec.yaml` (for example
 `1.0.1+2`). The number after `+` must go up every time.
 
+## Landing page and downloads
+
+`landing/` is a plain static site (HTML + CSS, no build step) deployed on
+Vercel with **Root Directory = `landing`**. Its Download buttons point at
+
+```
+https://github.com/Shreyashkolhe22/Sprout/releases/latest/download/Sprout.apk
+```
+
+so the file attached to the newest GitHub Release must be named exactly
+`Sprout.apk`. The link then never changes between versions.
+
+**Publishing a new version**
+
+1. Raise `version:` in `pubspec.yaml`.
+2. `flutter build apk --release`, then copy the result to `dist/Sprout.apk`
+   (`dist/` is git-ignored; the APK lives in GitHub Releases, not in git).
+3. On GitHub: Releases, Draft a new release, tag `vX.Y.Z`, attach `Sprout.apk`.
+4. Update the version, size and **SHA-256** shown in `landing/index.html`
+   (`Get-FileHash dist\Sprout.apk` on Windows). Every build has a new checksum.
+5. Push. Vercel redeploys the page automatically.
+
+After the first Vercel deploy, set the `og:image` meta tag in
+`landing/index.html` to the full URL (for example
+`https://your-site.vercel.app/assets/og.jpg`) so link previews work in chat apps.
+
+The screenshots on the page come from `tool/screenshot_demo.dart`, a seeded
+in-memory demo: `flutter run -t tool/screenshot_demo.dart`.
+
 ## Project structure
 
 Feature-first, with layers inside each feature. No state-management package:
@@ -113,6 +142,9 @@ assets/
   images/                        bundled artwork (logo tile, Pip illustrations)
   source/                        original sheets (NOT bundled in the app)
 test/                            unit, storage and widget-flow tests
+tool/screenshot_demo.dart        seeded demo for marketing screenshots
+landing/                         static landing page (deployed on Vercel)
+dist/                            built APKs (git-ignored)
 ```
 
 ## Artwork

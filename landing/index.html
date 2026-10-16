@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprout: tiny habits, big streaks (free Android habit tracker)</title>
+  <meta name="description" content="Sprout is a free, playful habit tracker for Android with real streaks, a focus timer, weekly stats and notes that hold images and PDFs. No account, no ads, works offline.">
+  <meta name="theme-color" content="#fff4e0">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Social preview. After the first deploy, change og:image to the full URL,
+       e.g. https://YOUR-SITE.vercel.app/assets/og.jpg (chat apps need an absolute URL). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sprout: tiny habits, big streaks">
+  <meta property="og:description" content="A free, playful habit tracker for Android with real streaks, a focus timer and notes with attachments.">
+  <meta property="og:image" content="/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sprout",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android 7.0+",
+    "softwareVersion": "1.0.0",
+    "description": "A playful habit tracker with real streaks, a focus timer, weekly stats and notes with image and PDF attachments.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "downloadUrl": "https://github.com/Shreyashkolhe22/Sprout/releases/latest/download/Sprout.apk"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./" aria-label="Sprout home">
+        <img src="assets/logo.png" width="44" height="44" alt="">
+        Sprout
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#screens">Screenshots</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--small" href="https://github.com/Shreyashkolhe22/Sprout/releases/latest/download/Sprout.apk">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div>
+          <span class="chip">Free &middot; for Android</span>
+          <h1>Tiny habits, <span class="mark">big streaks.</span></h1>
+          <p class="lead">Sprout is a playful habit tracker with real streaks, a focus timer and notes that hold your images and PDFs. Meet Pip, who cheers louder the closer you get.</p>
+
+          <div class="cta-row">
+            <a class="btn btn--big" id="download" href="https://github.com/Shreyashkolhe22/Sprout/releases/latest/download/Sprout.apk">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
+              Download APK
+            </a>
+            <a class="btn btn--white btn--big" href="#install">How to install</a>
+          </div>
+
+          <ul class="facts">
+            <li>Version 1.0.0 &middot; 53 MB</li>
+            <li>Android 7.0 or newer</li>
+            <li>No account, no ads, works offline</li>
+          </ul>
+
+          <div class="hint" id="desktop-hint" role="note">
+            <p>This page isn't open on an Android phone. The download still works, but Sprout only installs on Android. Open this page on your phone, or send it the link:</p>
+            <button class="btn btn--sun btn--small" type="button" data-copy-page>Copy page link</button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="phone">
+            <img src="assets/screens/today.jpg" width="560" height="1244" alt="Sprout's Today screen: 3 of 5 habits done, a 22 day streak and a list of habits with streak counters.">
+          </div>
+          <div class="float float--streak" aria-hidden="true">&#128293; 22 day streak</div>
+          <div class="float float--pip">
+            <img src="assets/pip/celebrate.jpg" width="400" height="493" alt="Pip the ghost celebrating with confetti.">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIP'S STORY -->
+    <section class="section section--white" aria-labelledby="pip-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="pip-title">Meet Pip.</h2>
+          <p>Pip is your habit buddy, and reacts to how your day is going. From the couch to a confetti party, one tick at a time.</p>
+        </div>
+        <ol class="story">
+          <li>
+            <span class="step">1</span>
+            <img class="pip-img" src="assets/pip/couch.jpg" width="400" height="400" loading="lazy" alt="Pip slumped on a messy green couch.">
+            <h3>Stuck on the couch</h3>
+            <p>Big goals feel heavy. So Sprout keeps them small.</p>
+          </li>
+          <li>
+            <span class="step">2</span>
+            <img class="pip-img" src="assets/pip/wake.jpg" width="400" height="478" loading="lazy" alt="Pip waking up and stretching in a sunny bedroom.">
+            <h3>A fresh day</h3>
+            <p>Plant a few tiny habits. Even one tick counts.</p>
+          </li>
+          <li>
+            <span class="step">3</span>
+            <img class="pip-img" src="assets/pip/checklist.jpg" width="400" height="495" loading="lazy" alt="Pip standing next to a checklist with ticks.">
+            <h3>Check in</h3>
+            <p>Tick habits off and watch your streaks climb.</p>
+          </li>
+          <li>
+            <span class="step">4</span>
+            <img class="pip-img" src="assets/pip/trophy.jpg" width="400" height="393" loading="lazy" alt="Pip hugging a golden trophy.">
+            <h3>Streak unlocked</h3>
+            <p>Hit a best streak and Pip brings out the trophy.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="features-title">Everything you need. Nothing you don't.</h2>
+          <p>Sprout does a few things well, and keeps your data on your phone.</p>
+        </div>
+        <div class="features">
+          <article class="card feature">
+            <div class="icon bg-tangerine" aria-hidden="true">&#128293;</div>
+            <h3>Habits with real streaks</h3>
+            <p>Streaks come from the days you actually did the habit, and reset when you miss one. Future days are locked, so there's no faking it.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon bg-sky" aria-hidden="true">&#128221;</div>
+            <h3>Notes with attachments</h3>
+            <p>Write, edit and search notes. Attach images and PDFs, and read PDFs right inside the app.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon bg-lilac" aria-hidden="true">&#128202;</div>
+            <h3>Your week at a glance</h3>
+            <p>A weekly chart, your best streak, perfect days and progress for every habit.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon bg-mint" aria-hidden="true">&#9201;&#65039;</div>
+            <h3>A focus timer</h3>
+            <p>Pick 5, 10 or 25 minutes for any habit and watch the ring fill. Mark it done when you're finished.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon bg-sun" aria-hidden="true">&#128274;</div>
+            <h3>Private by design</h3>
+            <p>No sign-up, no servers, no tracking, no ads. Everything is saved on your device.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon bg-coral" aria-hidden="true">&#128100;</div>
+            <h3>Your name, your data</h3>
+            <p>Log out any time. Log back in with the same name and your habits and notes are right where you left them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="section section--white" id="screens" aria-labelledby="screens-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="screens-title">A look inside.</h2>
+          <p>Real screens from the app.</p>
+        </div>
+        <ul class="shots">
+          <li>
+            <figure class="shot">
+              <div class="phone"><img src="assets/screens/today.jpg" width="560" height="1244" loading="lazy" alt="Today screen with progress ring, week strip and habit cards."></div>
+              <figcaption>Today<small>Tick off habits, keep streaks alive</small></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="shot">
+              <div class="phone"><img src="assets/screens/stats.jpg" width="560" height="1244" loading="lazy" alt="Stats screen with a weekly bar chart and per-habit progress."></div>
+              <figcaption>Stats<small>Your week, best streak, perfect days</small></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="shot">
+              <div class="phone"><img src="assets/screens/notes.jpg" width="560" height="1244" loading="lazy" alt="Notes screen with search and note cards showing image and PDF attachment badges."></div>
+              <figcaption>Notes<small>Search, edit, attach images and PDFs</small></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="shot">
+              <div class="phone"><img src="assets/screens/focus.jpg" width="560" height="1244" loading="lazy" alt="Focus timer with a large ring, 5, 10 and 25 minute options and Start button."></div>
+              <figcaption>Focus<small>A calm countdown for any habit</small></figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- INSTALL -->
+    <section class="section" id="install" aria-labelledby="install-title">
+      <div class="container">
+        <div class="card install">
+          <h2 id="install-title">Get Sprout for Android</h2>
+          <p class="meta">Version 1.0.0 &middot; 53 MB &middot; Android 7.0+ &middot; Free</p>
+
+          <div class="install-grid">
+            <div>
+              <a class="btn btn--big btn--white" href="https://github.com/Shreyashkolhe22/Sprout/releases/latest/download/Sprout.apk">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
+                Download APK
+              </a>
+              <p class="note">Sprout isn't on Google Play yet, so Android will ask you to confirm the install. The APK is signed with the Sprout release key. You can check it against the checksum below.</p>
+
+              <div class="checksum">
+                <h3>SHA-256 checksum</h3>
+                <code id="sha">A5ED3107A133836ED95276FB5474B36842B2EEE92F47AD28A4C348E58FD12A68</code>
+                <button class="btn btn--sun btn--small" type="button" data-copy-target="sha">Copy checksum</button>
+                <details>
+                  <summary>How do I check it?</summary>
+                  <p>Run one of these on the downloaded file and compare the result:</p>
+                  <pre>Windows:  certutil -hashfile Sprout.apk SHA256
+Mac/Linux: shasum -a 256 Sprout.apk</pre>
+                </details>
+              </div>
+            </div>
+
+            <ol class="steps">
+              <li>
+                <strong>Download the APK</strong>
+                <span>Tap the button on your Android phone, or send this page to it.</span>
+              </li>
+              <li>
+                <strong>Allow the install</strong>
+                <span>Open the file. If Android asks, allow your browser or Files app to "Install unknown apps". That's normal for apps outside the Play Store.</span>
+              </li>
+              <li>
+                <strong>Meet Pip</strong>
+                <span>Open Sprout, tell Pip your name and plant your first habit.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--white" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="faq-title">Questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is Sprout really free?</summary>
+            <p>Yes. No ads, no subscriptions and no in-app purchases.</p>
+          </details>
+          <details>
+            <summary>Does it need an account or internet?</summary>
+            <p>No. There's nothing to sign up for, and it works fully offline. You only enter a name so Pip knows what to call you.</p>
+          </details>
+          <details>
+            <summary>Where is my data stored?</summary>
+            <p>Only on your phone. Habits, notes and attachments never leave your device, and uninstalling Sprout removes them. If you log out, your data stays saved under your name until you uninstall.</p>
+          </details>
+          <details>
+            <summary>Why does Android warn me before installing?</summary>
+            <p>Android shows that prompt for any app that doesn't come from the Play Store. Sprout is signed with its own release key, and you can verify the file with the SHA-256 checksum above.</p>
+          </details>
+          <details>
+            <summary>Which phones does it work on?</summary>
+            <p>Android 7.0 or newer. There's no iPhone version yet.</p>
+          </details>
+          <details>
+            <summary>Where can I report a bug or see the code?</summary>
+            <p>On <a href="https://github.com/Shreyashkolhe22/Sprout">GitHub</a>. Open an issue and say what happened.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="brand" href="./">
+        <img src="assets/logo.png" width="44" height="44" alt="">
+        Sprout
+      </a>
+      <nav aria-label="Footer">
+        <a href="https://github.com/Shreyashkolhe22/Sprout">GitHub</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/Shreyashkolhe22/Sprout/releases/latest/download/Sprout.apk">Download</a>
+      </nav>
+      <small>Made by Shreyash. Pip says hi.</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
