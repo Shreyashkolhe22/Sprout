@@ -1,0 +1,36 @@
+﻿{
+    "name": "Sprout",
+    "short_name": "Sprout",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FFF4E0",
+    "theme_color": "#FF7A3D",
+    "description": "A playful habit tracker with real streaks.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
+
